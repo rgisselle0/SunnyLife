@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Paper</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Custom.css') }}">
+	<script src="{{ url_for('static', filename='javascript/PaperProduct.js') }}"></script>
+</head>
+<body>
+	<label type="text" id="CartIconQty"> </label>
+	<a href="{{ url_for('Cart') }}">
+	<img src="{{ url_for('static', filename='Cart.png') }}" alt="Cart" id="CartIcon"></a>
+    <form method="post">
+		<table>
+			<tr>
+				<td>
+					<img src="{{ url_for('static', filename='Paper.jpg') }}" alt="Paper">
+				</td>
+				<td>
+					<h3>Essentials 12" x 12" Cardstock Paper by Recollections™, 100 Sheets</h3>
+					<label id="Papermsg">{{ msg }}</label><br>
+					<select id="cmbPaperQty" name="cmbPaperQty">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select> 
+					<h4>$15.50</h4>
+					<p><b>Description</b></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit" id="btnPaperCart">Add to Cart</button>
+				</td>
+			</tr>
+		</table>
+    </form>
+</body>
+</html>

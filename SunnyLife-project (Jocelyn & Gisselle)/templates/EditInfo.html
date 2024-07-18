@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Edit Info</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Custom.css') }}">
+	<script src="{{ url_for('static', filename='javascript/EditInfo.js') }}"></script>
+</head>
+<body>
+	<label id="lblEditName">Full Name:</label><br>
+    <p>{{Name}}</p><br>
+    <button type="button" id="btnEditName">Edit</button><br>
+    <div id="divEditName">
+        <form method="post" action="/EditName">
+            <input id="txtEditName" name="txtEditName" type="text"><br>
+            <button id="btnName" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <label id="lblEditShipping">Shipping Address:</label><br>
+    <p>{{shipping}}</p><br>
+    <button type="button" id="btnEditShipping">Edit</button><br>
+    <div id="divEditShipping">
+        <form method="post" action="/EditShipping">
+            <input id="txtEditShipping" name="txtEditShipping" type="text"><br>
+            <button id="btnShipping" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <label id="lblEditBilling">Billing Address:</label><br>
+    <p>{{Billing}}</p><br>
+    <button type="button" id="btnEditBilling">Edit</button><br>
+    <div id="divEditBilling">
+        <form method="post" action="/EditBilling">
+            <input id="txtEditBilling" name="txtEditBilling" type="text"><br>
+            <button id="btnBilling" type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+    <label id="lblEditCard">Card Information:</label><br>
+    <p>{{Card}}</p><br>
+    <button type="button" id="btnEditCard">Edit</button><br>
+    <div id="divEditCard">
+        <form method="post" action="/EditCard">
+            <input id="txtEditCard" name="txtEditCard" type="text"><br>
+            <button id="btnCard" type="submit">Submit</button>
+        </form>
+    </div>
+	<form action="/GiveInvoice"><button id="btnCard" type="submit">Submit</button></form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Admin</title>
+    </head>
+    <body>
+        <h4>Hello Admin</h4>
+        <form method="post" action="/update_stock"> 
+            <div id="divWhich">
+                <label id="lblWhich">Do you need to Enter Product? Please Enter Product ID:</label><br>
+                <input id="txtWhich" name="txtWhich" type="text"><br>
+                <select id="cmbOperation" name="cmbOperation">
+                        <option value=""> </option>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                </select>
+            </div>
+            <div id="divHowMuch">
+                <label id="lblHowMuch">Please Enter Stock:</label>
+                <input id="txtHowMuch" name="txtHowMuch" type="text"> 
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <table>
+            <tr>
+                <td>The current stock for Paint (111): {{PaintStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Yarn (123): {{YarnStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Canvas (134): {{CanvasStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Gel Pens (176): {{GelPensStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Sew Needles (145): {{SewNeedleStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Markers (486): {{MarkersStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Tote (190): {{ToteStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Paper (129): {{PaperStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Resin (284): {{ResinStock}}</td>
+            </tr>
+            <tr>
+                <td>The current stock for Glue (155): {{GlueStock}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

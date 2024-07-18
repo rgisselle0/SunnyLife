@@ -1,0 +1,163 @@
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Custom.css') }}">
+</head>
+<body>
+    <h2>My Cart</h2>
+    <div id="DivCartPaint">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('PaintProduct') }}">
+					<img src="{{ url_for('static', filename='Paint.jpg') }}" alt="Paint"></a>
+				</td>
+                <td>
+					<p>16 Color Matte Acrylic Paint Value Pack by Craft Smart</p><br>
+					{{PaintUserQty}}
+					<form action="/RemovePaint"><button id="btnRemovePaint" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartYarn">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('YarnProduct') }}">
+                    <img src="{{ url_for('static', filename='Yarn.jpg') }}" alt="Yarn"></a>
+				</td>
+                <td>
+					<p>Soft Classic™ Solid Yarn by Loops & Threads</p>
+					{{YarnUserQty}}
+					<form action="/RemoveYarn"><button id="btnRemoveYarn" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartCanvas">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('CanvasProduct') }}">
+                    <img src="{{ url_for('static', filename='Canvas.jpg') }}" alt="Canvas"></a>
+				</td>
+                <td>
+					<p>6 Pack 12" x 16" Super Value Canvas by Artist's Loft</p>
+					{{CanvasUserQty}}
+					<form action="/RemoveCanvas"><button id="btnRemoveCanvas" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartGelPens">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('GelPensProduct') }}">
+					<img src="{{ url_for('static', filename='GelPens.jpg') }}" alt="GelPens"></a>
+				</td>
+                <td>
+					<p>Gelly Roll® Moonlight® 10 Bold Point Gel Pen 10 Color Set</p>
+					{{GelPensUserQty}}
+					<form action="/RemoveGelPens"><button id="btnRemoveGelPens" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartSewNeedles">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('SewNeedleProduct') }}">
+					<img src="{{ url_for('static', filename='SewNeedles.jpg') }}" alt="SewNeedles"></a>
+				</td>
+                <td>
+					<p>Stitching Needles by Make Market®</p>
+					{{SewNeedlesUserQty}}
+					<form action="/RemoveSewNeedles"><button id="btnRemoveSewNeedles" type="submit">Remove</button></form>
+					
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartMarkers">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('MarkersProduct') }}">
+					<img src="{{ url_for('static', filename='Markers.jpg') }}" alt="Markers"></a>
+				</td>
+                <td>
+					<p>Staedtler® Duo-Color Fiber-Tip 36 Color Marker Set</p>
+					{{MarkersUserQty}}
+					<form action="/RemoveMarkers"><button id="btnRemoveMarkers" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartTote">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('ToteProduct') }}">
+					<img src="{{ url_for('static', filename='Tote.jpg') }}" alt="Tote"></a>
+				</td>
+                <td>
+					<p>Reusable Tote Bag by Make Market®</p>
+					{{ToteUserQty}}
+					<form action="/RemoveTote"><button id="btnRemoveTote" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartPaper">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('PaperProduct') }}">
+					<img src="{{ url_for('static', filename='Paper.jpg') }}" alt="Paper"></a>
+				</td>
+                <td>
+					<p>Essentials 12" x 12" Cardstock Paper by Recollections™, 100 Sheets</p>
+					{{PaperUserQty}}
+					<form action="/RemovePaper"><button id="btnRemovePaper" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartResin">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('ResinProduct') }}">
+					<img src="{{ url_for('static', filename='Resin.jpg') }}" alt="Resin"></a>
+				</td>
+                <td>	
+					<p>Superclear Liquid Glass Deep Pour Epoxy Resin - 2"-4" 
+					Thick Deep Pour Epoxy Great for River Tables, Large Castings and much more!</p>
+					{{ResinUserQty}}
+					<form action="/RemoveResin"><button id="btnRemoveResin" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+    <div id="DivCartGlue">
+        <table>
+            <tr>
+                <td>
+					<a href="{{ url_for('GlueProduct') }}">
+					<img src="{{ url_for('static', filename='Glue.jpg') }}" alt="Glue"></a>
+				</td>
+                <td>
+					<p>White Glue by Craft Smart</p>
+					{{GlueUserQty}}
+					<form action="/RemoveGlue"><button id="btnRemoveGlue" type="submit">Remove</button></form>
+				</td>
+            </tr>
+        </table>
+    </div>
+	{{Total}}
+	<form method="get" action="/ShowInfo"><button> Submit </button></form>
+</body>
+</html>

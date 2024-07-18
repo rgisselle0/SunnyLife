@@ -1,0 +1,16 @@
+#CartIconQty
+{
+	width: 30px;
+    position: absolute;
+    top: 0; 
+    right: 0;
+}
+#CartIcon 
+{
+    width: 30px;
+    position: absolute;
+    top: 10; 
+    right: 0;
+	color: #FF0000
+
+}

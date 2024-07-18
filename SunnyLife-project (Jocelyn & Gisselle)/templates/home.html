@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Home</title>
+<style>
+body {
+  font-size: 28px;
+  background-color: #d0cfe9;
+  background-image: url('BG_TopHOME.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-top: 100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(71, 70, 155);
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #00008B;
+}
+
+a.active {
+  background-color: #00008B;
+}
+
+.box {
+  background-color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box img {
+  width: 100%;
+  max-width: 200px; /* Adjust the max-width to your preference */
+  height: auto;
+  max-height: 150px; /* Adjust the max-height to your preference */
+  object-fit: contain;
+}
+
+.box p {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+#welcome-message {
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Add relative positioning */
+  z-index: 1; /* Set z-index to place it above the content */
+}
+
+</style>   
+</head>
+<body>
+
+<div id="welcome-message">
+  <h2>{{ username }} Welcome to SunnyLife</h2>
+  <p>where every brushstroke, every bead, and every stitch brings your imagination to vibrant life!</p>
+</div>
+
+<ul>
+  <li style="float: left;"><a href="{{ url_for('Admin') }}" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Admin</a></li>
+  <li style="float: left;"><a href="{{ url_for('edit_info') }}" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">User Info</a></li>
+</ul>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 20px; margin-top: 20px;">
+  <a href="{{ url_for('CanvasProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Canvas.jpg') }}" alt="Image 1" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0; text-align: center;">Canvas</p>
+    </div>
+  </a>
+  <a href="{{ url_for('YarnProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Yarn.jpg') }}" alt="Image 2" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0; text-align: center;">Yarn</p>
+    </div>
+  </a>
+  <a href="{{ url_for('ToteProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Tote.jpg') }}" alt="Image 3" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0; text-align: center;">tote</p>
+    </div>
+  </a>
+  <a href="{{ url_for('SewNeedleProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='SewNeedles.jpg') }}" alt="Image 4" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">SewNeedles</p>
+    </div>
+  </a>
+  <a href="{{ url_for('ResinProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Resin.jpg') }}" alt="Image 5" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">Resin</p>
+    </div>
+  </a>
+  <a href="{{ url_for('PaintProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Paint.jpg') }}" alt="Image 8" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">Paint</p>
+    </div>
+  </a>
+  <a href="{{ url_for('PaperProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Paper.jpg') }}" alt="Image 7" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">Paper</p>
+    </div>
+  </a>
+  <a href="{{ url_for('MarkersProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Markers.jpg') }}" alt="Image 9" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">Markers</p>
+    </div>
+  </a>
+  <a href="{{ url_for('GlueProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='Glue.jpg') }}" alt="Image 10" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">Glue</p>
+    </div>
+  </a>
+  <a href="{{ url_for('GelPensProduct') }}" style="text-decoration: none; color: black; width: calc(33.333% - 10px); box-sizing: border-box;">
+    <div style="background-color: white; height: auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); padding: 20px;">
+      <img src="{{ url_for('static', filename='GelPens.jpg') }}" alt="Image 11" style="width: 100%; max-width: 200px; height: auto; max-height: 150px; object-fit: contain;">
+      <p style="margin: 10px 0 0 0;">GelPens</p>
+    </div>
+  </a>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+

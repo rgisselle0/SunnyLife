@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Invoice</title>	
+</head>
+<body>
+	<p>
+	Name: {{Name}}<br>
+	Date: {{todaydate}}<br>
+	Order Number: {{OrderNum}}<br>
+	Invoice Number: {{InvoiceNum}}<br><br>
+	Shipping:{{Shipping}}<br>
+	Billing: {{Billing}}<br>
+		
+	<table>
+		<tr>
+			<th>Product</th>
+			<th>Qty</th>
+			<th>Price</th>
+		</tr>
+			
+		{% for i in range (length) %}
+        <tr>
+            <td>{{ CartArray[i] }}</td>
+            <td>{{ qtyarry[i] }}</td>
+            <td>{{ CartPrice[i] }}</td>
+        </tr>
+        {% endfor %}
+	</table>
+		
+	Total: ${{Total}}<br>
+	Tax: ${{Tax}}<br>
+	Total: ${{TaxTotal}}<br>
+	
+	</p>
+</body>
+</html>

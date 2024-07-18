@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Paint</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Custom.css') }}">
+	<script src="{{ url_for('static', filename='javascript/PaintProducts.js') }}"></script>
+</head>
+<body>
+	<label type="text" id="CartIconQty"> </label>
+	<a href="{{ url_for('Cart') }}">
+	<img src="{{ url_for('static', filename='Cart.png') }}" alt="Cart" id="CartIcon"></a>
+    <form method="post">
+		<table>
+			<tr>
+				<td>
+					<img src="{{ url_for('static', filename='Paint.jpg') }}" alt="Paint">
+				</td>
+				<td>
+					<h3>16 Color Matte Acrylic Paint Value Pack by Craft Smart</h3>
+					<label id="Paintmsg">{{ msg }}</label><br>
+					<select id="cmbPaintQty" name="cmbPaintQty">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select> 
+					<h4>$20.99</h4>
+					<p><b>Description</b></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit" id="btnCartPaint">Add to Cart</button>
+				</td>
+			</tr>
+		</table>
+    </form>
+</body>
+</html>

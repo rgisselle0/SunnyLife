@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Yarn</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='Custom.css') }}">
+	<script src="{{ url_for('static', filename='javascript/YarnProduct.js') }}"></script>
+</head>
+<body>
+	<label type="text" id="CartIconQty"> </label>
+	<a href="{{ url_for('Cart') }}">
+	<img src="{{ url_for('static', filename='Cart.png') }}" alt="Cart" id="CartIcon"></a>
+    <form method="post">
+		<table>
+			<tr>
+				<td>
+					<img src="{{ url_for('static', filename='Yarn.jpg') }}" alt="Yarn">
+				</td>
+				<td>
+					<h3>Soft Classic™ Solid Yarn by Loops & Threads</h3>
+					<label id="Yarnmsg">{{ msg }}</label><br>
+					<select id="cmbYarnQty" name="cmbYarnQty">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select> 
+					<h4>$8.99</h4>
+					<p><b>Description</b></p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit" id="btnCartYarn">Add to Cart</button>
+				</td>
+			</tr>
+		</table>
+    </form>
+</body>
+</html>

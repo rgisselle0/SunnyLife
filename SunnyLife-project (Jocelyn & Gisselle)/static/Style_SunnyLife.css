@@ -1,0 +1,95 @@
+body {
+    background-image: url('WEB_Catalog.jpg');
+    background-size: cover; /* Adjust this as needed (auto, cover, contain) */
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+	border-right-style: solid;
+    border-left-style: solid;
+    border-right-width: 50px;  /* Adjust the width as needed */
+    border-left-width: 50px;   /* Adjust the width as needed */
+    border-right-color: rgb(70, 102, 156);  /* Choose your color */
+    border-left-color: rgb(70, 102, 156);   /* Choose your color */
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sunnylife-heading {
+    position: absolute; /* Added this line */
+    top: 5px; /* Adjust this value as needed */
+    text-align: center;
+    font-family: rgb(70, 102, 156), Chalkduster, fantasy;
+    font-size: 56px;
+    color: #555;
+}
+
+#login-box, #signup-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-right: 250px; /* Adjust this value if necessary */
+}
+
+#login-box h2, #signup-box h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#textbox {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#textbox label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#textbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f28d8d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #e77c7c;
+}
+
+#signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#signup-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>SunnyLife Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Style_SunnyLife.css') }}">
+</head>
+<body>
+    <div id="container">
+        <h1 id="sunnylife-heading">SunnyLife</h1>
+        <div id="login-box">
+            <h2>Login</h2>
+            <form action="{{ url_for('main') }}" method="post">
+                <div id="textbox">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="txtUser" required>
+                </div>
+                <div id="textbox">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="txtPass" required>
+                </div>
+                <button type="submit" id="btn">Login</button>
+                {% if msg1 %}
+                    <p style="color:red;">{{ msg1 }}</p>
+                {% endif %}
+                <p id="signup-link">Don't have an account? <a href="{{ url_for('create_account') }}">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
